@@ -8,10 +8,13 @@ function sortedFrequency(arr, num) {
     return lastIdx - firstIdx + 1;
 }
 
+expect(sortedFrequency([1, 1, 2, 2, 2, 2, 3], 2)).toBe(4);
+
 //Find the first index of the target value in the array, binary search
 function findFirst(arr, num, low = 0, high = arr.length - 1) {
     if (high >= low) {
         let mid = Math.floor((low + high) / 2);
+        //
         if ((mid === 0 || num > arr[mid - 1]) && arr[mid] === num) {
             return mid;
         } else if (num > arr[mid]) {
@@ -27,6 +30,7 @@ function findFirst(arr, num, low = 0, high = arr.length - 1) {
 function findLast(arr, num, low = 0, high = arr.length - 1) {
     if (high >= low) {
         let mid = Math.floor((low + high) / 2);
+        //what
         if ((mid === arr.length - 1 || num < arr[mid + 1]) && arr[mid] === num) {
             return mid;
         } else if (num < arr[mid]) {

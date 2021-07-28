@@ -1,6 +1,8 @@
 //Write a function called findRotateIndex which accepts a rotated array of sorted numbers and an integer
 //The function should return the index of num in the array. If the value is not found, return -1
 
+[];
+
 function findRotatedIndex(array, num) {
     var pivot = findPivot(array);
     if (pivot > 0 && num >= array[0] && num <= array[pivot - 1]) {
@@ -27,6 +29,7 @@ function binarySearch(array, num, start, end) {
     return -1;
 }
 
+//Why a pivot function
 function findPivot(arr) {
     //case for list of length 1 or 0
     if (arr.length === 1 || arr[0] < arr[arr.length - 1]) return 0;
