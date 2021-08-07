@@ -17,6 +17,7 @@ class BinaryTree {
    * the length of the shortest path from the root to a leaf. */
 
   minDepth() {
+    //case for if there is no node to traverse
     if (!this.root) return 0;
 
     function minDepthHelper(node) {
@@ -72,7 +73,7 @@ class BinaryTree {
   nextLarger(lowerBound) {
     if (!this.root) return null;
 
-    // let's use BFS for this!
+    // BFS
     let queue = [this.root];
     let closest = null;
 

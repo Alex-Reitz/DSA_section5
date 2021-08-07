@@ -16,7 +16,7 @@ class Tree {
 
   sumValues() {
     if (!this.root) return 0;
-
+    //Set total to the value of the root node
     let total = this.root.val;
 
     function sumHelper(node) {
@@ -31,7 +31,6 @@ class Tree {
         }
       }
     }
-
     sumHelper(this.root);
     return total;
   }
@@ -39,8 +38,9 @@ class Tree {
   /** countEvens(): count all of the nodes in the tree with even values. */
 
   countEvens() {
+    //Base case for if the tree is empty
     if (!this.root) return 0;
-
+    //checks to see if the root node's value is odd or even, if even increments the count by 1
     let count = this.root.val % 2 === 0 ? 1 : 0;
 
     function countEvensHelper(node) {
@@ -64,8 +64,9 @@ class Tree {
    * whose value is greater than lowerBound. */
 
   numGreater(lowerBound) {
+    //Base case for empty tree
     if (!this.root) return 0;
-
+    //Checks if the value of root node is greater than the lowerBound, if so count increments by 1
     let count = this.root.val > lowerBound ? 1 : 0;
 
     function countEvensHelper(node) {
